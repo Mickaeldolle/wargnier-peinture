@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.text-stroke {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgba(203, 203, 203, 0.741);
+}
+
+.custom-letter-spacing {
+  letter-spacing: clamp(1.3rem, 1.3vw, 1.3rem);
+}
