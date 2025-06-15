@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="./src/style/index.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script type="module" src="/src/main.js" defer></script>
-  <title>Vite App</title>
+  <title>Peintre Soissons Reims | Wargnier Peinture - +15 ans d'expérience</title>
 </head>
 
 <body>
@@ -20,13 +20,18 @@
         <img class="header__logo-img" src="./wargnier-logo.png" alt="logo">
         <div class="header__hero-content">
           <div class="header__hero-text">
-            <h1 class="header__hero-title">Wargnier
-              <br>
-              peinture
-            </h1>
-            <h2 class="header__hero-subtitle">Une expérience de plus de 15 ans, à votre service !</h2>
+            <div class="header__hero-titles">
+              <h1 class="header__hero-title">Wargnier
+                <br>
+                <span>peinture</span>
+              </h1>
+              <h2 class="header__hero-subtitle">15 ans d'expériences, à votre service !</h2>
+            </div>
+            <p class="header__hero-para">Situé entre <strong>Soissons</strong> et <strong>Reims</strong>, je vous
+              accompagne et vous conseil dans tous vos travaux de peintures de la conception à la réalisation.
+            </p>
           </div>
-          <button class="header__hero-button">En savoir plus</button>
+          <button class="header__hero-button btn">En savoir plus</button>
         </div>
       </section>
       <div class="header__socials-icons">
@@ -40,9 +45,9 @@
     </header>
     <main class="main">
       <section class="main__section main__section--explainer" id="explainer">
-        <h2 class="explainer-title">Sublimez vos projets</h2>
+        <h2 class="section-title explainer-title">Sublimez vos projets</h2>
         <h3 class="explainer-subtitle">Une finition incomparable</h3>
-        <div class="explainer-divider"></div>
+        <div class="divider explainer-divider"></div>
         <div class="explainer-text-container">
 
           <p class="explainer-text">Je vous accompagne dans vos projets, pour créer des espaces à vivre à
@@ -57,7 +62,7 @@
             un résultat exceptionnel,
             qui dure dans le temps.</p>
         </div>
-        <button class="explainer-button">Voir plus ...</button>
+        <button class="explainer-button btn">Voir plus ...</button>
       </section>
       <section class="main__section main__section--services" id="services">
         <div class="service service-interieur">
@@ -75,6 +80,48 @@
         <div class="service service-vitrerie">
           <h3 class="service-title">Vitrerie</h3>
         </div>
+      </section>
+
+      <section class="main__section main__section--customer">
+        <h2 class="section-title customer-title">Ils nous recommandent !</h2>
+        <div class="divider customer-divider"></div>
+        <div class="customer-articles">
+          <figure class="customer-article">
+            <img class="customer-image" src="./thevenin.webp" alt="logo thevenin">
+            <figcaption class="customer-legend">
+              Garage auto Thevenin Jonchery/Vesle
+            </figcaption>
+          </figure>
+          <figure class="customer-article">
+            <img class="customer-image" src="./citya.png" alt="logo citya">
+            <figcaption class="customer-legend">
+              Citya champagne Reims
+            </figcaption>
+          </figure>
+          <figure class="customer-article">
+            <img class="customer-image" src="./allianz.png" alt="logo Allianz">
+            <figcaption class="customer-legend">
+              Agence Allianz Soissons
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+      <section class="main__section main__section--contact">
+        <h2 class="section-title contact-title">Contact</h2>
+        <div class="divider contact-divider"></div>
+        <ul class="contact-info">
+          <li>Email: <span><a href="mailto:wargnierpeinture@gmail.com">wargnierpeinture@gmail.com</a></span></li>
+          <li>Téléphone: <span><a href="tel:0612345678">06 12 34 56 78</a></span></li>
+        </ul>
+        <form action="" class="contact-form">
+          <label class="contact-label" for="phone">N° Téléphone</label>
+          <input class="contact-input" type="tel" name="phone" id="phone" aria-label="numero de téléphone">
+          <label class="contact-label" for="lastname">Nom</label>
+          <input class="contact-input" type="text" name="lastname" id="lastname" aria-label="nom">
+          <label class="contact-label" for="message">Message</label>
+          <textarea class="contact-textarea" rows="4" name="message" id="message" aria-label="message"></textarea>
+          <button type="submit" class="contact-button btn">Envoyer</button>
+        </form>
       </section>
     </main>
   </body>

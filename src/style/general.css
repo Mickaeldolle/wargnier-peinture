@@ -17,9 +17,9 @@ body {
     padding: 0;
 }
 
-.explainer-divider {
+.divider {
     width: 50%;
     height: 1px;
-    background-color: #a89775;
+    background-color: #a897757f;
     margin: 32px auto;
 }
