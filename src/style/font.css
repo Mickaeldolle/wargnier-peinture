@@ -1,0 +1,27 @@
+/* Exemples de classes avec différents poids */
+.josefin-sans-light {
+    font-family: "Josefin Sans", sans-serif !important;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.josefin-sans-regular {
+    font-family: "Josefin Sans", sans-serif !important;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.josefin-sans-bold {
+    font-family: "Josefin Sans", sans-serif !important;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Ou plus simplement, une classe générale */
+.josefin-sans {
+    font-family: "Josefin Sans", sans-serif !important;
+    font-optical-sizing: auto;
+}
