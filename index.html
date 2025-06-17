@@ -32,41 +32,44 @@
 </head>
 
 <body>
-  <header class="header" id="header">
-    <section class="header__hero">
-      <img class="header__logo-img" src="./wargnier-logo.png" alt="logo">
-      <div class="header__hero-content">
-        <div class="header__hero-text">
-          <div class="header__hero-titles">
-            <h1 class="header__hero-title">Wargnier
-              <br>
-              <span>peinture</span>
-            </h1>
-            <h2 class="header__hero-subtitle">15 ans d'expériences, à votre service !</h2>
-          </div>
-          <p class="header__hero-para header__hero-para--first">Situé entre
-            <strong>Soissons</strong> et
-            <strong>Reims</strong>, je vous
-            accompagne et vous conseil dans tous vos travaux de peintures de la conception à la réalisation.
-          </p>
-          <p class="header__hero-para header__hero-para--second"><span class="font-bold">Particulier</span> ou
-            <span class="font-bold">professionnel</span>, obtenez un <br><span
-              class="font-bold text-xl uppercase text-end text-dark">devis
-              gratuit !</span>
-          </p>
+  <section class="hero" id="hero">
+    <header class="hero__header">
+      <img class="hero__logo-img" src="./wargnier-logo.png" alt="logo">
+      <button class="hero__burger-btn">
+        <img src="./burger.svg" alt="burger" class="hero__burger-icon">
+      </button>
+    </header>
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-titles">
+          <h1 class="hero-title">Wargnier
+            <br>
+            <span>peinture</span>
+          </h1>
+          <h2 class="hero-subtitle">15 ans d'expériences, à votre service !</h2>
         </div>
-        <a href="#contact" class="header__hero-button">En savoir plus</a>
+        <p class="hero-para hero-para--first">Situé entre
+          <strong>Soissons</strong> et
+          <strong>Reims</strong>, je vous
+          accompagne et vous conseil dans tous vos travaux de peintures de la conception à la réalisation.
+        </p>
+        <p class="hero-para hero-para--second"><span class="font-bold">Particulier</span> ou
+          <span class="font-bold">professionnel</span>, obtenez un <br><span
+            class="font-bold text-xl uppercase text-end text-dark">devis
+            gratuit !</span>
+        </p>
       </div>
-    </section>
-    <div class="header__socials-icons">
+      <a href="#contact" class="hero-button">En savoir plus</a>
+    </div>
+    <div class="socials-icons">
       <a href="https://www.facebook.com/wargnierpeinture" target="_blank">
-        <img src="./fb.svg" alt="facebook" class="header__socials-icon">
+        <img src="./fb.svg" alt="facebook" class="socials-icon">
       </a>
       <a href="https://www.instagram.com/wargnierpeinture" target="_blank">
-        <img src="./linkedin.svg" alt="linkedin" class="header__socials-icon">
+        <img src="./linkedin.svg" alt="linkedin" class="socials-icon">
       </a>
     </div>
-  </header>
+  </section>
   <main class="main">
     <section class="main__section main__section--explainer" id="explainer">
       <h2 class="section-title explainer-title">Sublimez vos projets</h2>
@@ -138,12 +141,13 @@
         <li>Téléphone: <span><a href="tel:0612345678">06 12 34 56 78</a></span></li>
       </ul>
       <form action="" class="contact-form">
-        <label class="contact-label" for="phone">N° Téléphone</label>
-        <input class="contact-input" type="tel" name="phone" id="phone" aria-label="numero de téléphone">
-        <label class="contact-label" for="lastname">Nom</label>
-        <input class="contact-input" type="text" name="lastname" id="lastname" aria-label="nom">
-        <label class="contact-label" for="message">Message</label>
-        <textarea class="contact-textarea" rows="3" name="message" id="message" aria-label="message"></textarea>
+        <label class="contact-label" for="phone">N° Téléphone *</label>
+        <input required class="contact-input" type="tel" name="phone" id="phone" aria-label="numero de téléphone">
+        <label class="contact-label" for="lastname">Nom *</label>
+        <input required class="contact-input" type="text" name="lastname" id="lastname" aria-label="nom">
+        <label class="contact-label" for="message">Message *</label>
+        <textarea required class="contact-textarea" rows="5" name="message" id="message"
+          aria-label="message"></textarea>
         <button type="submit" class="contact-button btn">Envoyer</button>
       </form>
     </section>
