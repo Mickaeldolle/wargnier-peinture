@@ -226,11 +226,25 @@
   background-position: center;
   /* filter: brightness(0.2); */
   transition: all 0.4s ease-in-out;
+  filter: contrast(1.2);
 }
 
-.service:hover {
-  filter: brightness(1);
-  transition: all 0.1s ease-in-out;
+.service::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Overlay noir semi-transparent pour assombrir */
+  background-color: rgba(0, 0, 0, 0.197);
+  /* Pour que l'overlay n'interfère pas avec les clics */
+  pointer-events: none;
+}
+
+.service>* {
+  position: relative;
+  z-index: 1;
 }
 
 .service-title {
@@ -241,9 +255,8 @@
   text-align: center;
   text-transform: uppercase;
   font-weight: 700;
-  color: #FFF;
-  background-color: #0000005f;
-  padding: 16px;
+  color: #dbdbda;
+  /* padding: 16px; */
 }
 
 .service-interieur {
@@ -265,6 +278,8 @@
 .service-vitrerie {
   background-image: url("../../vitrerie.jpg");
 }
+
+
 
 .customer-articles {
   margin: 32px 0;
