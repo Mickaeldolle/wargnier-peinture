@@ -27,11 +27,48 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Hand+Pre:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
     rel="stylesheet">
-  <script type="module" src="/src/main.js" defer></script>
+  <script type="module" src="/src/js/main.js" defer></script>
   <title>Peintre Soissons Reims | Wargnier Peinture</title>
 </head>
 
 <body>
+
+  <div id="menu-mobile-container">
+    <div class="menu-mobile">
+      <header class="menu-mobile__header">
+        <img class="menu-mobile__logo-img" src="./wargnier-logo.png" alt="logo">
+        <button class="menu-mobile__close-btn">
+          <img src="./close-icon.svg" alt="close" class="menu-mobile__close-icon">
+        </button>
+      </header>
+      <div class="menu-mobile-divider"></div>
+      <nav class="menu-mobile__nav">
+        <ul class="menu-mobile__nav-list menu-mobile__nav-list--main">
+          <li class="menu-mobile__nav-item">
+            <a href="#hero" class="menu-mobile__nav-link">Accueil</a>
+          </li>
+          <li class="menu-mobile__nav-item">
+            <a href="/realisations.html" class="menu-mobile__nav-link">Réalisations</a>
+          </li>
+          <li class="menu-mobile__nav-item">
+            <a href="#services" class="menu-mobile__nav-link">Nos services</a>
+          </li>
+          <li class="menu-mobile__nav-item">
+            <a href="#customer" class="menu-mobile__nav-link">Avis clients</a>
+          </li>
+          <li class="menu-mobile__nav-item">
+            <a href="#contact" class="menu-mobile__nav-link">Contact</a>
+          </li>
+        </ul>
+        <ul class="menu-mobile__nav-list--legals">
+          <li><a href="#contact" class="menu-mobile__nav-link menu-mobile__nav-link--legals">Mentions légales</a></li>
+          <li><a href="#contact" class="menu-mobile__nav-link menu-mobile__nav-link--legals">Politique de
+              confidentialité</a></li>
+        </ul>
+      </nav>
+    </div>
+
+  </div>
   <section class="hero" id="hero">
     <header class="hero__header">
       <img class="hero__logo-img" src="./wargnier-logo.png" alt="logo">
@@ -89,7 +126,10 @@
           un résultat exceptionnel,
           qui dure dans le temps.</p>
       </div>
-      <button class="explainer-button btn">Voir plus ...</button>
+      <!-- <button class="explainer-button btn">Voir plus ...</button> -->
+      <a href="/realisations" class="explainer-link btn ">Voir nos réalisations <img class="explainer-arrow"
+          src="./arrow-rigth.svg" alt="arrow" class="arrow-rigth"></a>
+
     </section>
     <section class="main__section main__section--services" id="services">
       <div class="service service-interieur">
@@ -109,29 +149,116 @@
       </div>
     </section>
 
-    <section class="main__section main__section--customer">
+    <section class="main__section main__section--customer" id="customer">
       <h2 class="section-title customer-title">Ils nous recommandent !</h2>
       <div class="divider customer-divider"></div>
-      <div class="customer-articles">
-        <figure class="customer-article">
-          <img class="customer-image" src="./thevenin.webp" alt="logo thevenin">
-          <figcaption class="customer-legend">
-            Garage auto Thevenin Jonchery/Vesle
-          </figcaption>
-        </figure>
-        <figure class="customer-article">
-          <img class="customer-image" src="./citya.png" alt="logo citya">
-          <figcaption class="customer-legend">
-            Citya champagne Reims
-          </figcaption>
-        </figure>
-        <figure class="customer-article">
-          <img class="customer-image" src="./allianz.png" alt="logo Allianz">
-          <figcaption class="customer-legend">
-            Agence Allianz Soissons
-          </figcaption>
-        </figure>
-      </div>
+      <div class="customers">
+        <div class="customer-buisness">
+
+          <figure class="customer-article">
+            <img class="customer-image" src="./larcher-logo.png" alt="logo Larcher">
+            <figcaption class="customer-legend">
+              Larcher technologies Reims
+            </figcaption>
+          </figure>
+          <figure class="customer-article">
+            <img class="customer-image" src="./thevenin.webp" alt="logo thevenin">
+            <figcaption class="customer-legend">
+              Garage auto Thevenin Jonchery-sur-Vesle
+            </figcaption>
+          </figure>
+          <figure class="customer-article">
+            <img class="customer-image" src="./citya.png" alt="logo citya">
+            <figcaption class="customer-legend">
+              Citya champagne Reims
+            </figcaption>
+          </figure>
+          <figure class="customer-article">
+            <img class="customer-image" src="./allianz.png" alt="logo Allianz">
+            <figcaption class="customer-legend">
+              Agence Allianz Soissons
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="customer-reviews">
+          <article class="customer-review">
+            <div class="customer-review__google">
+              <img class="customer-review__google-logo" src="./google-logo.webp" alt="google"> avis google vérifié
+            </div>
+            <header class="customer-review__header">
+              <p class="customer-review__name">hécart charles</p>
+              <div class="customer-review__stars">
+                <img class="customer-review__star" src="./star.svg" alt="star"><img class="customer-review__star"
+                  src="./star.svg" alt="star"><img class="customer-review__star" src="./star.svg" alt="star"><img
+                  class="customer-review__star" src="./star.svg" alt="star"><img class="customer-review__star"
+                  src="./star.svg" alt="star">
+              </div>
+            </header>
+            <div class="customer-review__comment-container">
+              <p class="customer-review__comment">Un artisan excellent!
+                WARGNIER PEINTURE est un prestataire qui travaille à l'ancienne, c'est à dire dans le respect du client,
+                du chantier et des règles de l'art.
+                Il connaît très bien son métier.
+                On rencontre de moins en moins d'artisans capables d'atteindre un tel niveau d'excellence.
+                Pour ceux qui ont déjà dû choisir des artisans, qui savent qu'il faut "être derrière leur dos tout le
+                temps", ce n'est pas le cas avec Mr WARGNIER.
+                Au contraire
+                Je recommande cette maison les yeux fermés.</p>
+            </div>
+          </article>
+
+
+          <article class="customer-review">
+            <div class="customer-review__google">
+              <img class="customer-review__google-logo" src="./google-logo.webp" alt="google"> avis google vérifié
+            </div>
+            <header class="customer-review__header">
+              <p class="customer-review__name">
+                Simon Fogielman</p>
+              <div class="customer-review__stars">
+                <img class="customer-review__star" src="./star.svg" alt="star"><img class="customer-review__star"
+                  src="./star.svg" alt="star"><img class="customer-review__star" src="./star.svg" alt="star"><img
+                  class="customer-review__star" src="./star.svg" alt="star"><img class="customer-review__star"
+                  src="./star.svg" alt="star">
+              </div>
+            </header>
+            <div class="customer-review__comment-container">
+              <p class="customer-review__comment">Un artisan digne de ce nom ! Respectant les délais et attentif aux
+                souhaits du client (ce qui devient rare à ce jour). Travaild'enduit de finition, ponçage très soigné. Je
+                recommande vivement !</p>
+            </div>
+          </article>
+
+          <article class="customer-review">
+            <div class="customer-review__google">
+              <img class="customer-review__google-logo" src="./google-logo.webp" alt="google"> avis google vérifié
+            </div>
+            <header class="customer-review__header">
+              <p class="customer-review__name">
+                Falco Giordano</p>
+              <div class="customer-review__stars">
+                <img class="customer-review__star" src="./star.svg" alt="star"><img class="customer-review__star"
+                  src="./star.svg" alt="star"><img class="customer-review__star" src="./star.svg" alt="star"><img
+                  class="customer-review__star" src="./star.svg" alt="star"><img class="customer-review__star"
+                  src="./star.svg" alt="star">
+              </div>
+            </header>
+            <div class="customer-review__comment-container">
+
+              <p class="customer-review__comment">Gauthier Wargnier vient de terminer le troisième chantier que nous lui
+                avons confié en 3 ans. Comme les fois précédentes, nous sommes extrêmement satisfaits du travail
+                effectué
+                (enduit, peinture, papier peint, quelques retouches de silicone).
+                C'est un artisan consciencieux, ponctuel et très sympathique (de même que son collègue). Le chantier
+                terminé est aussi nickel qu'à son arrivée, le plus petit détail de finition est repris si besoin avant
+                le
+                départ. A signaler que tous les accessoires, déco, prises...ont été déposés et remontés en fin de
+                travaux.
+                C'est vraiment un artisan à recommander et nous avons déjà reprogrammé de prochaines interventions.</p>
+            </div>
+          </article>
+        </div>
     </section>
     <section class="main__section main__section--contact" id="contact">
       <h2 class="section-title contact-title">Contact</h2>
