@@ -4,11 +4,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/style/_reset.css">
+    <link rel="stylesheet" href="./src/style/general.css">
+    <link rel="stylesheet" href="./src/style/realisation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Hand+Pre:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <script type="module" src="/src/js/main.js" defer></script>
+
     <title>Realisations</title>
 </head>
 
-<body>
-    <h1>Realisations</h1>
+<body class="body--realisations">
+    <div id="menu-mobile-container">
+        <div class="menu-mobile">
+            <header class="menu-mobile__header">
+                <img class="menu-mobile__logo-img" src="./wargnier-logo.png" alt="logo">
+                <button class="menu-mobile__close-btn">
+                    <img src="./close-icon.svg" alt="close" class="menu-mobile__close-icon">
+                </button>
+            </header>
+            <div class="menu-mobile-divider"></div>
+            <nav class="menu-mobile__nav">
+                <ul class="menu-mobile__nav-list menu-mobile__nav-list--main">
+                    <li class="menu-mobile__nav-item">
+                        <a href="index.html" class="menu-mobile__nav-link">Accueil</a>
+                    </li>
+                    <li class="menu-mobile__nav-item">
+                        <a href="realisations.html" class="menu-mobile__nav-link">Réalisations</a>
+                    </li>
+                    <li class="menu-mobile__nav-item">
+                        <a href="index.html#services" class="menu-mobile__nav-link">Nos services</a>
+                    </li>
+                    <li class="menu-mobile__nav-item">
+                        <a href="index.html#customer" class="menu-mobile__nav-link">Avis clients</a>
+                    </li>
+                    <li class="menu-mobile__nav-item">
+                        <a href="index.html#contact" class="menu-mobile__nav-link">Contact</a>
+                    </li>
+                </ul>
+                <ul class="menu-mobile__nav-list--legals">
+                    <li><a href="index.html#contact"
+                            class="menu-mobile__nav-link menu-mobile__nav-link--legals">Mentions
+                            légales</a></li>
+                    <li><a href="index.html#contact"
+                            class="menu-mobile__nav-link menu-mobile__nav-link--legals">Politique de
+                            confidentialité</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+
+    <header class="hero__header">
+        <div class="hero__header-menu">
+            <img class="hero__logo-img" src="./wargnier-logo.png" alt="logo">
+            <button class="hero__burger-btn">
+                <img src="./burger.svg" alt="burger" class="hero__burger-icon">
+            </button>
+        </div>
+        <h1 class="hero__header-title">Realisations</h1>
+    </header>
+    <main class="main">
+        <article class="main__article">
+            <h2 class="main__article-title">Lorem ipsum dolor sit amet.</h2>
+            <figure>
+                <img src="./couleur-salon.jpg" alt="realisation" class="main__article-img">
+                <figcaption class="main__article-content">
+                    <p class="main__article-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam,
+                        quod.
+                    </p>
+                </figcaption>
+            </figure>
+        </article>
+    </main>
+    <footer class="footer">
+        <nav class="footer__nav">
+            <ul class="footer__ul">
+                <li class="footer__li"><a class="footer__link" href="">mentions légales</a></li>
+                <!-- <li class="footer__li"><a class="footer__link" href="">plan du site</a></li> -->
+                <li class="footer__li"><a class="footer__link" href="">contact</a></li>
+                <li class="footer__li"><a class="footer__link" href="">politique de confidentialité</a></li>
+            </ul>
+        </nav>
+        <p class="footer__copy">© 2025 Wargnier Peinture. Tous droits réservés.</p>
+    </footer>
 </body>
 
 </html>

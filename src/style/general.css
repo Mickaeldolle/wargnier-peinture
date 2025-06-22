@@ -1,5 +1,5 @@
-/* :root {
-    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+:root {
+    /* font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
 
@@ -9,18 +9,23 @@
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-} */
+    -moz-osx-font-smoothing: grayscale; */
+
+    --font: "Josefin Sans", "sans-serif";
+    --primary-color: #a89775;
+    --secondary-color: #d0be9a;
+}
 
 body {
     margin: 0;
     padding: 0;
+    font-family: var(--font);
 }
 
 .divider {
     width: 50%;
     height: 1px;
-    background-color: #a897757f;
+    background-color: var(--primary-color);
     margin: 32px auto;
 }
 
@@ -53,7 +58,7 @@ body {
     right: 0;
     bottom: 0;
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     display: none;
     transform: translateX(100%);
 }
@@ -93,7 +98,7 @@ body {
 
 .menu-mobile__logo-img {
     padding: 5px;
-    background-color: #fff;
+    /* background-color: #fff; */
     border-radius: 5px;
     width: 100px;
 }
@@ -123,7 +128,7 @@ body {
     left: 0;
     width: 100%;
     height: 1px;
-    background: linear-gradient(to right, transparent, #a89775, transparent);
+    background: linear-gradient(to right, transparent, var(--primary-color), transparent);
 }
 
 .menu-mobile__nav-list {
@@ -138,7 +143,7 @@ body {
 
 .menu-mobile__nav-link {
     text-decoration: none;
-    color: #a89775;
+    color: var(--primary-color);
     font-weight: 700;
     /* text-transform: uppercase; */
     font-size: 1.3rem;
@@ -154,4 +159,39 @@ body {
     font-weight: 400;
     font-size: 0.8rem;
     text-transform: none;
+}
+
+.footer {
+    background-color: #1b1b2c;
+    color: #fff;
+}
+
+.footer__nav {
+    padding: 16px;
+}
+
+.footer__ul {
+    display: grid;
+    /* border: 1px solid #fff; */
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.footer__li {
+    list-style: none;
+    margin-bottom: 16px;
+    /* border: 1px solid #fff; */
+    text-align: center;
+}
+
+.footer__link {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer__copy {
+    padding: 6px;
+    font-size: 0.9rem;
+    text-align: center;
+    background-color: #000;
 }

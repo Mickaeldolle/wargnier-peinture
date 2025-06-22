@@ -20,6 +20,7 @@ const app = {
         // Puis appliquer la transformation
         app.menuMobileElement.style.transform = 'translateX(0)'
         app.menuMobileElement.style.left = '0'
+        app.body.style.overflow = 'hidden'
     },
 
     closeMenuHandler: () => {
@@ -27,11 +28,10 @@ const app = {
         app.menuMobileElement.style.transform = 'translateX(-100%)'
         app.menuMobileElement.style.left = '1000px'
         app.menuMobileElement.style.transition = `all ${transitionTime}s ease-in-out`
+        app.body.style.overflow = 'auto'
         setTimeout(() => {
             app.menuMobileElement.style.display = 'none'
         }, transitionTime * 1000)
-        // const clone = document.importNode(app.menuMobileTemplate.content, true)
-        // app.body.removeChild(clone)
     },
 
     setShowMoreBtn: () => {
