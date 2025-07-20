@@ -3,36 +3,70 @@
 
 <head>
   <meta charset="UTF-8" />
-  <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" type="image/x-icon" sizes="16x16" href="/favicon-16.ico">
+  <link rel="icon" type="image/x-icon" sizes="32x32" href="/favicon-32.ico">
+  <link rel="icon" type="image/x-icon" sizes="48x48" href="/favicon-48.ico">
+  <link rel="apple-touch-icon" type="image/x-icon" sizes="180x180" href="/favicon-180.ico">
+  <link rel="icon" type="image/x-icon" sizes="192x192" href="/favicon-192.ico">
+
   <meta name="description"
-    content="Peintre professionnel entre Soissons et Reims. 15 ans d'expérience. Devis gratuit pour particuliers et professionnels. Peinture intérieur, extérieur, sol, papier peint.">
+    content="Peintre professionnel situé a Fismes, entre Soissons et Reims. 15 ans d'expérience. Devis gratuit pour particuliers et professionnels. Peinture intérieur, extérieur, sol, papier peint.">
   <meta name="keywords"
-    content="peintre soissons, peintre reims, peinture intérieur, peinture extérieur, devis gratuit peinture">
+    content="peintre soissons, peintre reims, peinture intérieur, peinture extérieur, sol souple, parquet, papier peint, revêtements muraux, vitrerie, peintre fismes, peintre saint-gilles, peintre thillois, peintre tinqueux, peintre bezannes">
   <meta name="author" content="Wargnier Peinture">
   <link rel="canonical" href="https://wargnier-peinture.netlify.app">
   <meta name="robots" content="index, follow">
   <meta name="language" content="French">
-  <meta name="geo.region" content="FR-02">
-  <meta name="geo.placename" content="Soissons, Reims">
+  <meta name="geo.region" content="FR-51">
+  <meta name="geo.placename" content="Soissons, Reims, Fismes, Saint-Gilles, Thillois, Tinqueux, Bezannes">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Peintre Soissons Reims | Wargnier Peinture">
+  <meta property="og:title" content="Peintre Soissons Reims, Wargnier Peinture">
   <meta property="og:image" content="https://wargnier-peinture.netlify.app/wargnier-logo.png">
   <meta property="og:url" content="https://wargnier-peinture.netlify.app">
-  <link rel="stylesheet" href="./src/style/_reset.css">
-  <link rel="stylesheet" href="./src/style/general.css">
-  <link rel="stylesheet" href="./src/style/index.css">
+  <link rel="stylesheet" href="./src/style/home.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Hand+Pre:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
     rel="stylesheet">
   <script type="module" src="/src/js/main.js" defer></script>
+  <script type="module" src="/src/js/home.js" defer></script>
+  <script>
+    window.axeptioSettings = {
+      clientId: "6877feaf2b830ea0577f8d73",
+      cookiesVersion: "wargnier-peinture-fr-EU",
+      googleConsentMode: {
+        default: {
+          analytics_storage: "denied",
+          ad_storage: "denied",
+          ad_user_data: "denied",
+          ad_personalization: "denied",
+          wait_for_update: 500
+        }
+      }
+    };
+
+    (function (d, s) {
+      var t = d.getElementsByTagName(s)[0], e = d.createElement(s);
+      e.async = true; e.src = "//static.axept.io/sdk.js";
+      t.parentNode.insertBefore(e, t);
+    })(document, "script");
+  </script>
   <title>Peintre Soissons Reims | Wargnier Peinture</title>
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WCXBNF1RQV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-WCXBNF1RQV');
+</script>
 
 <body>
-
   <div id="menu-mobile-container">
     <div class="menu-mobile">
       <header class="menu-mobile__header">
@@ -61,7 +95,7 @@
           </li>
         </ul>
         <ul class="menu-mobile__nav-list--legals">
-          <li><a href="#contact" class="menu-mobile__nav-link menu-mobile__nav-link--legals">Mentions
+          <li><a href="./legals.html" class="menu-mobile__nav-link menu-mobile__nav-link--legals">Mentions
               légales</a></li>
           <li><a href="#contact" class="menu-mobile__nav-link menu-mobile__nav-link--legals">Politique de
               confidentialité</a></li>

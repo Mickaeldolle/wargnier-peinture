@@ -7,6 +7,7 @@ const app = {
     closeMenuBtn: document.querySelector('.menu-mobile__close-btn'),
     menuLinkElement: document.querySelectorAll('.menu-mobile__nav-link'),
 
+
     openMenuHandler: () => {
         // D'abord définir la transition
         app.menuMobileElement.style.transition = `all 0.2s ease-in-out`
@@ -57,7 +58,6 @@ const app = {
         app.setShowMoreBtn()
     }
 }
-
 
 
 window.addEventListener('DOMContentLoaded', () => {

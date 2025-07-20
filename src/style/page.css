@@ -1,0 +1,81 @@
+@import url("./_reset.css");
+@import url("./font.css");
+@import url("./general.css");
+
+.body--realisations {
+  height: 100vh;
+}
+
+.hero__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+  background-image: url("../../couleur-salon.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: contrast(1.1);
+  height: 25dvh;
+  align-items: start;
+  margin-bottom: 32px;
+}
+
+.hero__header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.323);
+  pointer-events: none;
+}
+
+.hero__header > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero__header-menu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero__header-title {
+  font-family: "Josefin Sans", "sans-serif";
+  color: var(--primary-color);
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.664);
+  font-size: 2rem;
+  margin-bottom: 16px;
+  margin: 0 auto;
+  font-weight: 700;
+}
+
+.hero__logo-img {
+  border-radius: 10px;
+  width: 150px;
+  /* margin: 0 auto 32px; */
+}
+
+.hero__burger-btn {
+  padding: 16px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.hero__burger-icon {
+  width: 20px;
+}
+
+.main {
+  padding: 0 16px;
+  font-family: var(--font);
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+}

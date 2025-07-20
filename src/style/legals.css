@@ -1,0 +1,14 @@
+.legals__subtitle {
+  font-size: 1.2rem;
+  margin: 16px 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+}
+
+.legals__para {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #333;
+  margin-bottom: 16px;
+}
