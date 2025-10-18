@@ -23,8 +23,8 @@ const home = {
     }
 
     scrollExplainerAnimation(home.explainerTitle, 0.9, 0.5);
-    scrollExplainerAnimation(home.explainerSubtitle, 0.7, 0.5);
-    scrollExplainerAnimation(home.explainerText, 0.5, 0.3);
+    scrollExplainerAnimation(home.explainerSubtitle, 0.8, 0.5);
+    scrollExplainerAnimation(home.explainerText, 0.7, 0.5);
 
     // Ajouter chaque service avec animation complète
     home.service.forEach((serviceElement, index) => {
@@ -46,7 +46,7 @@ const home = {
   // Méthode pour ajuster les paramètres si besoin
   adjustAnimationSettings() {
     // Exemple d'ajustements dynamiques
-    scrollAnimation.elements.forEach(elementData => {
+    home.scrollAnimation.elements.forEach(elementData => {
       if (elementData.element.classList.contains('service')) {
         // Ajuster les services
         elementData.options.translateY = 150;
@@ -61,7 +61,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // Optionnel : nettoyer au déchargement de la page
 window.addEventListener('beforeunload', () => {
-  if (scrollAnimation) {
-    scrollAnimation.destroy();
+  if (home.scrollAnimation) {
+    home.scrollAnimation.destroy();
   }
 });

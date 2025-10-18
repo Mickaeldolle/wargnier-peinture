@@ -1,4 +1,4 @@
-
+import mail from "./mail"
 const app = {
 
     body: document.querySelector('body'),
@@ -55,6 +55,21 @@ const app = {
         app.menuLinkElement.forEach(link => {
             link.addEventListener('click', app.closeMenuHandler)
         })
+
+        mail.contactForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const form = new FormData(event.currentTarget)
+            const senderData = {
+                phone: '',
+                email: '',
+                message: ''
+            }
+            for (const formData of form.entries()) {
+                senderData[formData[0]] = formData[1]
+            }
+            mail.sendContactMail(senderData)
+        })
+
         app.setShowMoreBtn()
     }
 }
@@ -62,4 +77,5 @@ const app = {
 
 window.addEventListener('DOMContentLoaded', () => {
     app.init()
+    mail.init()
 });

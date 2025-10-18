@@ -31,8 +31,10 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Hand+Pre:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
     rel="stylesheet">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script type="module" src="/src/js/main.js" defer></script>
   <script type="module" src="/src/js/home.js" defer></script>
+  <script type="module" src="/src/js/mail.js" defer></script>
   <script>
     window.axeptioSettings = {
       clientId: "6877feaf2b830ea0577f8d73",
@@ -55,6 +57,31 @@
     })(document, "script");
   </script>
   <title>Peintre Soissons Reims | Wargnier Peinture</title>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Wargnier Peinture",
+      "image": "https://wargnierpeinture.fr/wargnier-logo.png",
+      "url": "https://wargnierpeinture.fr",
+      "telephone": "+33619107375",
+      "email": "wargnierpeinture51@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Saint-Gilles",
+        "addressRegion": "Grand Est",
+        "postalCode": "51170",
+        "addressCountry": "FR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "49.28162315841225",
+        "longitude": "3.675591632708473"
+      },
+      "areaServed": ["Soissons", "Reims", "Fismes", "Saint-Gilles", "Thillois", "Tinqueux", "Bezannes"]
+    }
+</script>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WCXBNF1RQV"></script>
@@ -74,6 +101,7 @@
         <button class="menu-mobile__close-btn">
           <img src="./close-icon.svg" alt="close" class="menu-mobile__close-icon">
         </button>
+
       </header>
       <div class="menu-mobile-divider"></div>
       <nav class="menu-mobile__nav">
@@ -81,9 +109,9 @@
           <li class="menu-mobile__nav-item">
             <a href="index.html" class="menu-mobile__nav-link">Accueil</a>
           </li>
-          <li class="menu-mobile__nav-item">
+          <!-- <li class="menu-mobile__nav-item">
             <a href="./realisation.html" class="menu-mobile__nav-link">Réalisations</a>
-          </li>
+          </li> -->
           <li class="menu-mobile__nav-item">
             <a href="#services" class="menu-mobile__nav-link">Nos services</a>
           </li>
@@ -108,6 +136,13 @@
   <section class="hero" id="hero">
     <header class="hero__header">
       <img class="hero__logo-img" src="./wargnier-logo.png" alt="logo">
+      <nav class="menu-desktop">
+        <ul class="menu-desktop__ul">
+          <li class="menu-desktop__li"><a class="menu-desktop__link" href="#services">Nos services</a></li>
+          <li class="menu-desktop__li"><a class="menu-desktop__link" href="#customer">Avis clients</a></li>
+          <li class="menu-desktop__li"><a class="menu-desktop__link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
       <button class="hero__burger-btn">
         <img src="./burger.svg" alt="burger" class="hero__burger-icon">
       </button>
@@ -121,13 +156,13 @@
           </h1>
           <h2 class="hero-subtitle">15 ans d'expériences, à votre service !</h2>
         </div>
-        <p class="hero-para hero-para--first">Situé entre
+        <p class="hero-para hero-para--first">Situé à <strong>Fismes,</strong> entre
           <strong>Soissons</strong> et
           <strong>Reims</strong>, je vous
           accompagne et vous conseil dans tous vos travaux de peintures de la conception à la réalisation.
         </p>
         <p class="hero-para hero-para--second"><span class="font-bold">Particulier</span> ou
-          <span class="font-bold">professionnel</span>, obtenez un <br><span
+          <span class="font-bold">professionnel</span>, obtenez un <span
             class="font-bold text-xl uppercase text-end text-dark">devis
             gratuit !</span>
         </p>
@@ -135,12 +170,12 @@
       <a href="#contact" class="hero-button">En savoir plus</a>
     </div>
     <div class="socials-icons">
-      <a href="https://www.facebook.com/wargnierpeinture" target="_blank">
+      <!-- <a href="https://www.facebook.com/wargnierpeinture" target="_blank">
         <img src="./fb.svg" alt="facebook" class="socials-icon">
       </a>
       <a href="https://www.instagram.com/wargnierpeinture" target="_blank">
         <img src="./linkedin.svg" alt="linkedin" class="socials-icon">
-      </a>
+      </a> -->
     </div>
   </section>
   <main class="main">
@@ -163,8 +198,8 @@
           qui dure dans le temps.</p>
       </div>
       <!-- <button class="explainer-button btn">Voir plus ...</button> -->
-      <a href="./realisation.html" class="explainer-link btn ">Voir nos réalisations <img class="explainer-arrow"
-          src="./arrow-rigth.svg" alt="arrow" class="arrow-rigth"></a>
+      <!-- <a href="./realisation.html" class="explainer-link btn ">Voir nos réalisations <img class="explainer-arrow"
+          src="./arrow-rigth.svg" alt="arrow" class="arrow-rigth"></a> -->
 
     </section>
     <section class="main__section main__section--services" id="services">
@@ -297,31 +332,37 @@
         </div>
     </section>
     <section class="main__section main__section--contact" id="contact">
-      <h2 class="section-title contact-title">Contact</h2>
-      <div class="divider contact-divider"></div>
-      <ul class="contact-info">
-        <li>Email: <span><a href="mailto:wargnierpeinture@gmail.com">wargnierpeinture@gmail.com</a></span></li>
-        <li>Téléphone: <span><a href="tel:0612345678">06 12 34 56 78</a></span></li>
-      </ul>
-      <form action="" class="contact-form">
-        <label class="contact-label" for="phone">N° Téléphone *</label>
-        <input required class="contact-input" type="tel" name="phone" id="phone" aria-label="numero de téléphone">
-        <label class="contact-label" for="lastname">Nom *</label>
-        <input required class="contact-input" type="text" name="lastname" id="lastname" aria-label="nom">
-        <label class="contact-label" for="message">Message *</label>
-        <textarea required class="contact-textarea" rows="5" name="message" id="message"
-          aria-label="message"></textarea>
-        <button type="submit" class="contact-button btn">Envoyer</button>
-      </form>
+      <main>
+
+        <h2 class="section-title contact-title">Contact</h2>
+        <div class="divider contact-divider"></div>
+        <ul class="contact-info">
+          <li>Email: <span><a href="mailto:wargnierpeinture51@gmail.com">wargnierpeinture51@gmail.com</a></span></li>
+          <li>Téléphone: <span><a href="tel:0619107375">06 19 10 73 75</a></span></li>
+        </ul>
+        <div class="contact-notification">
+          <!-- Merci pour votre message, nous reviendrons vers vous très bientôt ! -->
+        </div>
+        <form action="" class="contact-form">
+          <label class="contact-label" for="phone">N° Téléphone *</label>
+          <input required class="contact-input" type="tel" name="phone" id="phone" aria-label="numero de téléphone">
+          <label class="contact-label" for="email">email *</label>
+          <input required class="contact-input" type="email" name="email" id="email" aria-label="email">
+          <label class="contact-label" for="message">Message *</label>
+          <textarea required class="contact-textarea" rows="5" name="message" id="message"
+            aria-label="message"></textarea>
+          <button type="submit" class="contact-button btn">Envoyer</button>
+        </form>
+      </main>
+
     </section>
   </main>
   <footer class="footer">
     <nav class="footer__nav">
       <ul class="footer__ul">
-        <li class="footer__li"><a class="footer__link" href="">mentions légales</a></li>
-        <!-- <li class="footer__li"><a class="footer__link" href="">plan du site</a></li> -->
-        <li class="footer__li"><a class="footer__link" href="">contact</a></li>
-        <li class="footer__li"><a class="footer__link" href="">politique de confidentialité</a></li>
+        <li class="footer__li"><a class="footer__link" href="/legals.html">mentions légales</a></li>
+        <li class="footer__li"><a class="footer__link" href="#contact">contact</a></li>
+        <li class="footer__li"><a class="footer__link" href="/legals.html">politique de confidentialité</a></li>
       </ul>
     </nav>
     <p class="footer__copy">© 2025 Wargnier Peinture. Tous droits réservés.</p>

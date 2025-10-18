@@ -1,0 +1,11 @@
+
+User-agent: *
+Allow: /
+
+# Bloquer les fichiers inutiles pour le SEO
+Disallow: /src/js/
+Disallow: /src/style/
+Disallow: /*.json$
+
+# Crawl-delay (optionnel, pour éviter la surcharge)
+Crawl-delay: 1
