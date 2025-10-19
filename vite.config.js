@@ -7,7 +7,8 @@ export default defineConfig({
       input: {
         main: './index.html',
         realisation: './realisation.html',
-        legals: './legals.html'
+        legals: './legals.html',
+        privaty: './privaty.html'
       },
     },
   },

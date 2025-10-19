@@ -6,6 +6,7 @@ const app = {
     menuMobileBtn: document.querySelector('.hero__burger-btn'),
     closeMenuBtn: document.querySelector('.menu-mobile__close-btn'),
     menuLinkElement: document.querySelectorAll('.menu-mobile__nav-link'),
+    showMoreBtn: document.querySelectorAll('.customer-review__show-more'),
 
 
     openMenuHandler: () => {
@@ -38,10 +39,36 @@ const app = {
     setShowMoreBtn: () => {
         const showMoreBtn = `<button class="customer-review__show-more">Voir plus ...</button>`
         const commentContainer = document.querySelectorAll('.customer-review__comment-container')
+
         commentContainer.forEach(container => {
-            if (container.querySelector('.customer-review__comment').textContent.length > 300) {
-                container.innerHTML = container.querySelector('.customer-review__comment').textContent.slice(0, 300) + showMoreBtn
+            const commentElement = container.querySelector('.customer-review__comment')
+            const fullText = commentElement.textContent
+
+            if (fullText.length > 300) {
+                const truncatedText = fullText.slice(0, 300) + '...'
+
+                // Sauvegarder le texte complet dans un attribut data
+                container.dataset.fullText = fullText
+                container.innerHTML = `<p class="customer-review__comment">${truncatedText}</p>` + showMoreBtn
             }
+        })
+
+        const showMoreButtons = document.querySelectorAll('.customer-review__show-more')
+        showMoreButtons.forEach((button) => {
+            button.addEventListener('click', (event) => app.displayComment(event))
+        })
+    },
+
+    displayComment: (event) => {
+        const container = event.currentTarget.parentElement
+        const fullText = container.dataset.fullText
+        container.innerHTML = `<p class="customer-review__comment">${fullText}</p>`
+        const showLessBtn = container.querySelector('.customer-review__show-less')
+        showLessBtn.addEventListener('click', (e) => {
+            const truncatedText = fullText.slice(0, 300) + '...'
+            container.innerHTML = `<p class="customer-review__comment">${truncatedText}</p> <button class="customer-review__show-more">Voir plus ...</button>`
+            container.querySelector('.customer-review__show-more')
+                .addEventListener('click', (event) => app.displayComment(event))
         })
     },
     init() {
